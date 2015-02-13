@@ -74,7 +74,7 @@ type Googleimages struct {
 }
 
 func (c *Client) Fetch(query string) (*Googleimages, error) {
-	res, err := c.Get(EndPoint + "?v=1.0&q=" + url.QueryEscape(query))
+	res, err := c.Get(EndPoint + "?hl=ja&v=1.0&q=" + url.QueryEscape(query))
 	if err != nil {
 		return nil, err
 	}
